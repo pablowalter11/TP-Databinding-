@@ -1,0 +1,11 @@
+.cargarProd{
+    background-color: pink;
+}
+
+.listaProd li{
+    list-style: none;
+}
+
+.descuento{
+    background-color: crimson;
+}

@@ -1,0 +1,18 @@
+<div class="cargarProd">
+    <div>
+        <h3>Ingrese el producto que desee llevar y su precio:</h3>
+        <input type="text" #nombreInput placeholder="nombre producto">
+        <input type="number" #precioInput placeholder="precio producto">
+        Descuento :<input type="checkbox" #descuentoInput>
+        <button (click)="agregarProducto(nombreInput.value,+precioInput.value,descuentoInput.checked)">Agregar Producto</button>
+    </div>
+    <div class="listaProd">
+        <h2>Lista de productos:</h2>
+        <ul *ngFor="let prod of productos" [ngClass]="{'descuento': prod.descuento}">
+            <li>
+                {{prod.nombre}} - ${{prod.precio}} <button (click)="eliminarPorId(prod.id)">Eliminar producto</button>
+            </li>
+        </ul>
+    </div>
+    
+</div>
